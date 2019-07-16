@@ -1,0 +1,10 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm fixed-top">
+  <a class="my-0 mr-md-auto font-weight-normal  text-dark" href="index.php" style="text-decoration: none" >
+  <h5>Παιχνίδια συγκέντωσης</h5>
+  </a>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" href="#">Στατιστικά στοιχεία</a>
+      <a class="p-2 text-dark" href="account.php"> Ο λογαριασμός μου</a>
+    </nav>
+<a class="btn btn-outline-danger" href="index.php?logout=1">Αποσύνδεση</a>
+</div>
