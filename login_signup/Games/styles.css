@@ -52,3 +52,44 @@ body {
 .front-face {
   transform: rotateY(180deg);
 }
+
+.info {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.round {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.count {
+  position: absolute;
+  top: 40%;
+  left: 5%;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
+
+
+}
+
+.life{
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 20%;
+  padding: 10px;
+  text-align: center;
