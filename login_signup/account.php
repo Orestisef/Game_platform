@@ -2,17 +2,20 @@
 <!DOCTYPE html>
 <html>
 <?php require_once 'partials/links.php' ?>
+<?php require_once 'partials/navbar.php' ?>
   <head>
     <meta charset="utf-8">
     <title>Λογαριασμός</title>
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/mainpage.css">
     <link rel="stylesheet" type="text/css" href="css/style_signup.css">
-    
+
   </head>
-  <body>
-    <?php require_once 'partials/navbar.php' ?>
+  <body onload="myFunction()" style="margin:0;">
+    <div id="loader"></div>
+
     <div class="section-1 box mobilebox">
+      <div id="myDiv" class="animate-bottom">
      <form class="form-signin">
        <input type="hidden" name="id" value="<?php echo $_SESSION['id'];?>">
        <h1 class="h3 mb-3 font-weight-normal text-center">Στοιχεία Λογαριασμού</h1>
@@ -33,5 +36,7 @@
    </div>
      </form>
      </div>
+     </div>
   </body>
+  <script src="loaderScript.js"></script>
 </html>

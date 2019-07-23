@@ -9,17 +9,21 @@
 <!DOCTYPE html>
 <html>
   <?php require_once 'partials/links.php' ?>
+  <?php require_once 'partials/navbar.php' ?>
   <head>
     <meta charset="utf-8">
     <title>Κεντρική Σελίδα</title>
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/mainpage.css">
-  </head>
-  <body>
-    <?php require_once 'partials/navbar.php' ?>
 
+  </head>
+
+  <body onload="myFunction()" style="margin:0;">
+
+    <div id="loader"></div>
+    <div class="section-1 box mobilebox"></div>
     <main role="main">
-      <div class="section-1 box mobilebox"></div>
+      <div id="myDiv" class="animate-bottom">
       <div class="album py-5 ">
         <div class="container">
           <div class="accordion" id="accordionExample">
@@ -68,5 +72,7 @@
         </div>
       </div>
     </main>
+    </div>
   </body>
+  <script src="loaderScript.js"></script>
 </html>
