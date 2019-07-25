@@ -10,12 +10,15 @@
   </head>
   <body>
 
-      
-      <div class="round" id="round" style="font-size: 30px;font-weight: 400;color: white;"></div>
-      <div class="count" id="count" style="font-size: 30px;font-weight: 400;color: white;"><button type="button" class="btn btn-primary count" onclick="countDown(30, 'status')">Go!</button></div>
+        <div class="round" id="round" style="font-size: 30px;font-weight: 400;color: white;"><button type="button" class="btn btn-outline-primary btn-block"  onclick="countDown(5, 'status')">Go!</button></div>
+      <div class="count" id="count" style="font-size: 30px;font-weight: 400;color: white;"></div>
       <div class="life" id="life" style="font-size: 30px;font-weight: 400;color: white;"></div>
       <div class="info" id="status" style="font-size: 50px;font-weight: 900;color: white;"></div>
       <div class="wins" id="wins" style="font-size: 30px;font-weight: 400;color: white;"></div>
+      <div class="gameOver" id="gameOver" style="font-size: 100px;font-weight: 900;"></div>
+
+
+<div id="myDiv" class="animate-bottom">
 
       <section class = "memory-game">
         <div class="memory-card" data-framework="ember">
@@ -67,6 +70,7 @@
           <img class = "back-face" src="img/js-badge.svg" alt="">
         </div>
       </section>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>

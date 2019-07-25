@@ -8,7 +8,7 @@ let countDisableCards = 0;
 let round = 1;
 let count = 0;
 let score = 0;
-let life = 3;
+let life = 2;
 let wins = 0;
 
 function flipCard() {
@@ -76,9 +76,7 @@ function shuffle(){
 
 function countDown(secs, elem1) {
   var element = document.getElementById(elem1);
-  document.getElementById('round').innerHTML= 'Γύρος: '+round;
-  document.getElementById('count').innerHTML='Γυρίσματα: '+count;
-  document.getElementById('life').innerHTML= 'Ζωές : '+life;
+  printCounters();
   element.innerHTML = "00:"+secs;
   if(secs<10) {
     element.innerHTML = "00:0"+secs;
@@ -104,7 +102,7 @@ function resetRound() {
   setTimeout('shuffle()',1000);
   count = 0;
   countDisableCards = 0;
-  setTimeout('countDown(28, "status")',3000);
+  setTimeout('countDown(5, "status")',3000);
   cards.forEach( card => card.removeEventListener('click', flipCard));
   cards.forEach( card => setTimeout(()=> {card.addEventListener('click', flipCard)},3000));
 }
@@ -114,13 +112,34 @@ function countDownLife(secs) {
   if ((countDisableCards!=6) && (secs == 0)){
     --life;
     if (life == 0){
+
       cards.forEach( card => card.removeEventListener('click', flipCard));
       cards.forEach(card => card.classList.add('flip'));
-      document.location.reload();
+      printCounters();
+      document.getElementById('gameOver').innerHTML= 'GAME OVER';
+      clearTimeout(timer);
     }
   }
 }
 
+function printCounters() {
+  document.getElementById('round').innerHTML= 'Γύρος: '+round;
+  document.getElementById('count').innerHTML='Γυρίσματα: '+count;
+  document.getElementById('life').innerHTML= 'Ζωές : '+life;
+}
 
-cards.forEach( card => card.addEventListener('click', flipCard));
+
+(function animation() {
+
+setTimeout(showPage, 500);
+})();
+
+function showPage() {
+    document.getElementById("myDiv").style.display = "block";
+}
+
+
+
+
+  cards.forEach( card => card.addEventListener('click', flipCard));
 shuffle();

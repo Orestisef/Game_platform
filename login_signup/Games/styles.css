@@ -10,6 +10,7 @@ body {
   background-image: url("4.jpg");
 }
 
+
 .memory-game {
   width: 640px;
   height: 640px;
@@ -53,7 +54,14 @@ body {
   transform: rotateY(180deg);
 }
 
+#myDiv {
+  display: none;
+  margin: auto;
+}
+
+
 .info {
+  z-index: 5;
   position: absolute;
   top: 20%;
   left: 5%;
@@ -65,6 +73,7 @@ body {
 }
 
 .round {
+  z-index: 5;
   position: absolute;
   top: 30%;
   left: 5%;
@@ -76,6 +85,7 @@ body {
 }
 
 .count {
+  z-index: 5;
   position: absolute;
   top: 40%;
   left: 5%;
@@ -87,10 +97,51 @@ body {
 }
 
 .life{
+  z-index: 5;
   position: absolute;
   top: 50%;
   left: 5%;
   width: 20%;
   padding: 10px;
   text-align: center;
+}
+
+.gameOver{
+  height: 100vh;
+  position: ;
+  top: 40%;
+  left: 15%;
+  right: 15%;
+  text-align: center;
+  animation: blinker 1s linear infinite;
+  color: #ffff;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* Add animation to "page content" */
+
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { right:-100px; opacity:0 }
+  to { right:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+  from{ right:-100px; opacity:0 }
+  to{ right:0; opacity:1 }
 }
