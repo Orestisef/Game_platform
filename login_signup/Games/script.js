@@ -84,7 +84,7 @@ function countDown(secs, elem1) {
   countDownLife(secs);
   if(secs < 0) {
     clearTimeout(timer);
-    element.innerHTML = 'Γύρος '+(++round);
+    element.innerHTML = 'Round '+(++round);
     resetRound();
     return;
   }
@@ -102,7 +102,7 @@ function resetRound() {
   setTimeout('shuffle()',1000);
   count = 0;
   countDisableCards = 0;
-  setTimeout('countDown(5, "status")',3000);
+  setTimeout('countDown(30, "status")',3000);
   cards.forEach( card => card.removeEventListener('click', flipCard));
   cards.forEach( card => setTimeout(()=> {card.addEventListener('click', flipCard)},3000));
 }
@@ -117,15 +117,16 @@ function countDownLife(secs) {
       cards.forEach(card => card.classList.add('flip'));
       printCounters();
       document.getElementById('gameOver').innerHTML= 'GAME OVER';
+        document.getElementById('replay').innerHTML= '<button type="button" class="btn btn-outline-success btn-block"  onclick="countDown(5,`status`)">Ξανά</button>';
       clearTimeout(timer);
     }
   }
 }
 
 function printCounters() {
-  document.getElementById('round').innerHTML= 'Γύρος: '+round;
-  document.getElementById('count').innerHTML='Γυρίσματα: '+count;
-  document.getElementById('life').innerHTML= 'Ζωές : '+life;
+  document.getElementById('round').innerHTML= 'Round: '+round;
+  document.getElementById('count').innerHTML='Flips: '+count;
+  document.getElementById('life').innerHTML= 'Life : '+life;
 }
 
 
@@ -141,5 +142,5 @@ function showPage() {
 
 
 
-  cards.forEach( card => card.addEventListener('click', flipCard));
+cards.forEach( card => card.addEventListener('click', flipCard));
 shuffle();

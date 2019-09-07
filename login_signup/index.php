@@ -12,7 +12,7 @@
   <?php require_once 'partials/navbar.php' ?>
   <head>
     <meta charset="utf-8">
-    <title>Κεντρική Σελίδα</title>
+    <title>Bang Games</title>
     <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/mainpage.css">
 
@@ -37,7 +37,7 @@
                     <img src="1.jpg" class="card-img-top" alt="first">
                     <div class="card-body">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="Games/index.html" class="btn btn-primary">Παίξε τώρα</a>
+                      <a href="Games/index.html" class="btn btn-primary">Play Now</a>
                     </div>
                   </div>
               </div>
@@ -48,7 +48,7 @@
                   <img src="2.jpg" class="card-img-top" alt="first">
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="Games/index.html" class="btn btn-primary">Παίξε τώρα</a>
+                    <a href="Games/index.html" class="btn btn-primary">Play Now</a>
                   </div>
                 </div>
               </div>
@@ -59,7 +59,7 @@
                   <img src="3.jpg" class="card-img-top" alt="Card image cap">
                   <div class="card-body">
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="Games/index.html" class="btn btn-primary">Παίξε τώρα</a>
+                    <a href="Games/index.html" class="btn btn-primary">Play Now</a>
                   </div>
                 </div>
               </div>
